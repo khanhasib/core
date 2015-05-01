@@ -1,0 +1,100 @@
+<?php if ($this->pageCount): ?>
+      
+<?php if(isset($this->pagetype) && trim($this->pagetype)!=''): ?>
+       <div class="pagination pagination-centered">
+        <ul>
+            <!-- Previous page link -->
+            <?php if (isset($this->previous)): ?>
+                <li>
+                    <a onclick = "onclickPage('<?php echo $this->previous; ?>');" id="<?php echo 'pageIdPrevious'; ?>" href="javaScript:void(0);">
+                        <<
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="javaScript:void(0);">
+                        <<
+                    </a>
+                </li>
+            <?php endif; ?>
+            <!-- Numbered page links -->
+            <?php foreach ($this->pagesInRange as $page): ?>
+                <?php if ($page != $this->current): ?>
+                    <li>
+                        <a onclick = "onclickPage('<?php echo $page; ?>');" id="<?php echo 'pageId'.$page; ?>"  href="javaScript:void(0);">
+                            <?php echo $page; ?>
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li class="active">
+                        <a href="javaScript:void(0);"><?php echo $page; ?></a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!-- Next page link -->
+            <?php if (isset($this->next)): ?>
+                <li>
+                    <a onclick = "onclickPage('<?php echo $this->next; ?>');" id="<?php echo 'pageIdNext'; ?>" href="javaScript:void(0);">
+                        >>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="javaScript:void(0);">
+                        >>
+                    </a>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </div>    
+    <?php else: ?>
+        <div class="pagination pagination-centered">
+            <ul>
+                <!-- Previous page link -->
+                <?php if (isset($this->previous)): ?>
+                    <li>
+                        <a href="<?php echo $this->url($this->route, array('action' => $this->action, 'id'=> $this->id, 'id2'=> $this->id2, 'type'=> $this->type)); ?>?page=<?php echo $this->previous; ?><?php echo ($this->routeParams) ? $this->routeParams : ""; ?>">
+                            <<
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li class="disabled">
+                        <a href="#">
+                            <<
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <!-- Numbered page links -->
+                <?php foreach ($this->pagesInRange as $page): ?>
+                    <?php if ($page != $this->current): ?>
+                        <li>
+                            <a href="<?php echo $this->url($this->route, array('action' => $this->action, 'id'=> $this->id, 'id2'=> $this->id2, 'type'=> $this->type));?>?page=<?php echo $page; ?><?php echo ($this->routeParams) ? $this->routeParams : ""; ?>">
+                                <?php echo $page; ?>
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li class="active">
+                            <a href="#"><?php echo $page; ?></a>
+                        </li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
+                <!-- Next page link -->
+                <?php if (isset($this->next)): ?>
+                    <li>
+                        <a href="<?php echo $this->url($this->route, array('action' => $this->action, 'id'=> $this->id, 'id2'=> $this->id2, 'type'=> $this->type)); ?>?page=<?php echo $this->next; ?><?php echo ($this->routeParams) ? $this->routeParams : ""; ?>">
+                            >>
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li class="disabled">
+                        <a href="#">
+                            >>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>    
+    <?php endif; ?>
+<?php endif; ?>

@@ -7,7 +7,7 @@
 //flags
 $IsPromoEnable = 0; // 0 to disable Promobar
 if($IsPromoEnable){?>
-    <section id="header_info" style="text-align: center">
+<div class="container">
     <div class="alert alert-info" role="alert">
         <a href="#" onclick="_gaq.push(['_trackEvent', 'InfoBar', 'Default-InviteFriends', 'promo-bar']); return false;">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -22,7 +22,7 @@ if($IsPromoEnable){?>
         </a>
         <button type="button" class="btn btn-xs btn-primary" onclick="jQuery(this).parent('div').remove();">Dismiss</button>
     </div>
-    </section>
+</div>
 <?php }?>
     
     <!--END PROMOBAR SECTION -->

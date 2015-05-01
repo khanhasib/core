@@ -18,4 +18,37 @@ class IndexController extends AbstractActionController
     {
         return new ViewModel();
     }
+
+    public function galleryAction()
+    {
+        return new ViewModel();
+    }
+    
+    public function contactAction()
+    {
+        return new ViewModel();
+    }
+
+    public function missionAction()
+    {
+        $search = $this->params()->fromQuery('search','');
+        return new ViewModel(array(
+            'search' => $search,
+        ));
+    }
+    
+        
+    public function portfolioAction()
+    {
+        $view = new ViewModel(array(
+            'message' => 'Hello world',
+        ));
+        $view->setTemplate('application/index/gallery.phtml');
+        return $view;
+    }
+
+    public function packageAction()
+    {
+        return new ViewModel();
+    }    
 }

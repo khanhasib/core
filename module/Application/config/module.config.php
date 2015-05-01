@@ -20,6 +20,19 @@ return array(
                     ),
                 ),
             ),
+            'app' => array(      //APPLICATION WITHOUT CONTROLLER IN URL
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/[:action]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
@@ -85,7 +98,7 @@ return array(
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
 
-            'layout/promobar'           => __DIR__ . '/../view/layout/promobar.phtml',
+            'layout/promobar'         => __DIR__ . '/../view/layout/promobar.phtml',
             'layout/header'           => __DIR__ . '/../view/layout/header.phtml', 
             'layout/footer'           => __DIR__ . '/../view/layout/footer.phtml',
 
