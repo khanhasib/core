@@ -1,15 +1,16 @@
 <?php echo $this->doctype(); ?>
 
 <html lang="en">
-    <head>      
-        <?php echo $this->headMeta()
-            ->setCharset('utf-8')
-            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
-            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-        ?>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+        <?php echo $this->headTitle( $this->translate('Skeleton Application') )->setSeparator(' - ')->setAutoEscape(false) ?>
         
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
-
+        <?php echo $this->headMeta() ?>
+        
+        <!-- og Meta -->
         <meta property='og:locale' content='en_IN'/>
 	<meta property='og:type' content='home'/>
 	<meta property='og:title' content='Find a Tracker Application ABC.com'/>

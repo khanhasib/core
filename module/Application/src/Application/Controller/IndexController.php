@@ -16,7 +16,10 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $view = new ViewModel(array(
+            'page_title' => '',
+        ));
+        return $view;
     }
 
     public function galleryAction()
@@ -26,7 +29,10 @@ class IndexController extends AbstractActionController
     
     public function contactAction()
     {
-        return new ViewModel();
+        $view = new ViewModel(array(
+            'page_title' => 'Contact Us',
+        ));
+        return $view;
     }
 
     public function missionAction()
