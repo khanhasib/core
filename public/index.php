@@ -5,6 +5,7 @@
  */
 chdir(dirname(__DIR__));
 
+/** Loads the Application Environment ,Setting and Template */
 require_once 'config/application.setting.php';
  
 // Decline static file requests back to the PHP built-in webserver

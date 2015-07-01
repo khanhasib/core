@@ -13,6 +13,6 @@ define('DEBUGGING', TRUE);  //TRUE OR FALSE
      ini_set("display_errors", 1);
  }
  
- define('APPLICATION_NAME', 'ZF2');  //Skeleton Application
+ define('APPLICATION_NAME', 'ZendCore');  //ZendCore
  define('APPLICATION_ORG', 'Zend Technologies Ltd');  //Zend Technologies Ltd
  

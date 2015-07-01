@@ -1,3 +1,3 @@
 --
--- Database: `wordpress` Alter Statements
+-- Database: `zencdore` Alter Statements
 --
