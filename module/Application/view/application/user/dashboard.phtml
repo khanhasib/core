@@ -1,0 +1,61 @@
+<?php 
+$this->headTitle('mission');
+$this->headMeta()->appendName('keywords', 'mission Keywords');
+$this->headMeta()->appendName('description', 'mission Description');
+
+?>
+    <!--Mission SECTION-->    
+    <section  id="services-sec">
+        <div class="container">
+            <div class="row ">
+                <div class="text-center g-pad-bottom">
+                   <div class="col-md-4 col-sm-4 alert-info">
+                            <h4><i class="fa fa-laptop fa-2x" ></i>&nbsp;Our Location </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                    <div class="col-md-4 col-sm-4 alert-success">
+                            <h4><i class="fa fa-microphone fa-2x" ></i>&nbsp;Our Values</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                   
+                    <div class="col-md-4 col-sm-4 alert-danger">
+                            <h4><i class="fa fa-pencil fa-2x" ></i>&nbsp; Our Mission </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          
+                    </div>
+                </div>
+                  </div>
+            
+        
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <ul class="nav nav-tabs nav-justified">
+                <li role="presentation"><a href="<?php echo $this->url('app', array('action' => 'gallery')); ?>" ><strong>Gallery</strong></a></li>
+                <li role="presentation"  class="active"><a href="<?php echo $this->url('app', array('action' => 'portfolio')); ?>" ><strong>Portfolio</strong></a></li>
+            </ul>
+            Mission
+            <?php ?>
+            <?php 
+                if ($this->search) {
+                    echo '  searching for =='.$this->search; //do something
+                }
+            ?>
+            
+            <?php //echo $this->stuff();?>
+            <?php //echo $this->myStuff();?>
+        </div>
+    </section>
+    <!--END Mission SECTION-->
+    
+    <?php echo $this->partial('partials/feedback.phtml', array("name"=>"khan"));?>

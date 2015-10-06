@@ -1,42 +1,9 @@
     <!--404 SECTION-->    
-    <section  id="services-sec">
-        <div class="container">
-            <div class="row ">
-                <div class="text-center g-pad-bottom">
-                   <div class="col-md-4 col-sm-4 alert-info">
-                            <h4><i class="fa fa-laptop fa-2x" ></i>&nbsp;Our Location </h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                            
-                    </div>
-                    <div class="col-md-4 col-sm-4 alert-success">
-                            <h4><i class="fa fa-microphone fa-2x" ></i>&nbsp;Our Values</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                            
-                    </div>
-                   
-                    <div class="col-md-4 col-sm-4 alert-danger">
-                            <h4><i class="fa fa-pencil fa-2x" ></i>&nbsp; Our Mission </h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                          
-                    </div>
-                </div>
-                  </div>
-            
-        
-        </div>
-    </section>
-    
     <section>
         <div class="container">
             <h1><?php echo $this->translate('An error occurred') ?></h1>
             <h2><?php echo $this->message ?></h2>
-
+<?php if(DEBUGGING){ ?>
             <?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
 
             <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
@@ -96,7 +63,41 @@
             <?php endif ?>
 
             <?php endif ?>
+<?php } //end if(DEBUGGING) ?>             
+        </div>
+    </section>
+    
+        
+    <section  id="services-sec">
+        <div class="container">
+            <div class="row ">
+                <div class="text-center g-pad-bottom">
+                   <div class="col-md-4 col-sm-4 alert-info">
+                            <h4><i class="fa fa-laptop fa-2x" ></i>&nbsp;Our Location </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                    <div class="col-md-4 col-sm-4 alert-success">
+                            <h4><i class="fa fa-microphone fa-2x" ></i>&nbsp;Our Values</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            
+                    </div>
+                   
+                    <div class="col-md-4 col-sm-4 alert-danger">
+                            <h4><i class="fa fa-pencil fa-2x" ></i>&nbsp; Our Mission </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                          
+                    </div>
+                </div>
+                  </div>
             
+        
         </div>
     </section>
     <!--END 404 SECTION-->
